@@ -1,0 +1,86 @@
+body {
+    font-family: 'Roboto';
+    margin: 0px;
+    font-size: 16px;
+    color:aliceblue;
+    line-height: 1.5;
+    text-align:  justify;
+}
+
+
+
+footer {
+    
+    background: linear-gradient(113deg, #03318f 0%, #2572da 65%);
+    color: #fff;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.5;    
+    font-family: Roboto;
+    margin: 0px;
+    padding: 10px ; 
+     
+    bottom: 0;
+    left: 0;
+    right: 0;
+    
+    position: relative;
+
+}
+    
+
+header {
+    position: fixed; /* Зафиксировать элемент */
+    top: 0; /* Прикрепить к верху страницы */
+    width: 100%; /* Занимать всю ширину экрана */
+    z-index: 1000; 
+    background: linear-gradient(113deg, #03318f 0%, #2572da 65%);
+    color: #fff;
+    font-family: Arial;
+    margin: 0px;
+    padding: 10px; 
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 30px;
+    padding-left: 10px;
+    padding-top: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+a {
+    color: green;
+    text-decoration: none;
+    transition: 1s, 2s;
+}
+
+a:link {
+    color: blue;
+}
+
+a:visited {
+    color: rgb(77, 98, 105);
+    text-decoration: underline;
+}
+
+a:hover {
+    color: red;
+    text-decoration: underline;
+    transition: 0.3s;
+}
+
+a:active {
+    color: black;
+    opacity: 0.3;
+}
+
+div.menu {
+    border: 4px solid #084b0880;
+    border-radius: 5px;
+    width: 300px;
+    margin: 0 auto;
+}
+
+div.menu:hover {
+    background-color: #ffffff30;
+    box-shadow: 0 0 15px #00000030;
+}
+
