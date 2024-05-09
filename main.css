@@ -90,3 +90,14 @@ main {
     vertical-align: middle;
     margin-left: 20px;
 }
+
+.menu-item:hover {
+    background-color: rgba(162, 169, 254, 0.739); /* Цвет подсветки при наведении */
+    box-shadow: 0 0 11px rgba(10, 52, 238, 0.5);
+    color: white;
+}
+
+.menu-item.active {
+    background-color: #053fb4;
+    color: white;
+}
