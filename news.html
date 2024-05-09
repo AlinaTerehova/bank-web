@@ -16,25 +16,11 @@
     <style>
         header {
             display: flex;
-            align-items: center; /* Выравниваем элементы по вертикали */
+            align-items: center; 
             
         }
 
-        .imgHead {
-            vertical-align: middle; /* Выравниваем изображение по центру по вертикали */
-        }
-        
-        .news-line {
-            background: linear-gradient(113deg, #03318f 0%, #2572da 65%);
-            height: 150px;
-            color: white;
-            margin-top: 120px;   
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 50px;
-            
-        }
+    
 
         h1 {
             font-size: 16px;
@@ -42,8 +28,7 @@
 
         }
 
-        
-
+    
         .discount {
             
             border: 1px solid;
@@ -61,8 +46,8 @@
         
 
         button {
-            float: right; /* Размещаем кнопку справа */
-            margin-left: 10px; /* Добавляем отступ слева */
+            float: right; 
+            margin-left: 10px; 
             cursor: pointer;
             background-color: white;
             border-color: whitesmoke;
@@ -71,6 +56,9 @@
 
         }
 
+        tr, td {
+            text-align: center;
+        }
 
     </style>
 
@@ -88,6 +76,10 @@
             newsContent.previousElementSibling.style.display = 'block';
         }
 
+        function navigateTo(url) {
+            window.location.href = url;
+        }
+
         
     </script>
 </head>
@@ -97,12 +89,20 @@
         <img src="img\logo2.png" height="60px">
         </div>
         Сибсоцбанк 
+
+        <div class="menu">
+            <div class="menu-item" onclick="navigateTo('company.html')">О нас</div>
+            <div class="menu-item" onclick="navigateTo('calculator.html')">Калькулятор </div>
+            <div class="menu-item" onclick="navigateTo('news.html')">Новости</div>
+            <div class="menu-item" onclick="navigateTo('contacts.html')">Контакты</div>
+            <div class="menu-item" onclick="navigateTo('video.html')">Видео</div>
+        </div>
     </header>
 
 
     <main>
         
-        <div class="news-line">
+        <div class="line">
             НОВОСТИ
 
         </div>
@@ -148,6 +148,11 @@
             
         <div class="discount" style="display: none">
             <button onclick="closeNews(this)">Закрыть новость</button>
+            <h1>
+                
+                24.04.2024
+                "Ступенчатый Плюс" - новый вклад со ставкой от 14,5% годовых
+            </h1>
             <p>С 22 апреля в Сибсоцбанке действует новый вклад "Ступенчатый Плюс" с фиксированными ставками и периодами выплаты процентов: </p>
 
             <ul type="disc">
@@ -175,8 +180,7 @@
 
         <div class="discount" style="display: none">
             <button onclick="closeNews(this)">Закрыть новость</button>
-
-            <h1>19.04.2024
+           <h1>19.04.2024
                 Режим работы Банка на майские праздники
             </h1>
             <p>Май — месяц теплого солнца, встреч с друзьями и прекрасных праздников. 
@@ -439,7 +443,7 @@
     </main>
 
     <footer>
-   
+        1992–2024 «СибСоцБанк» ООО
     </footer>
 </body>
 </html>

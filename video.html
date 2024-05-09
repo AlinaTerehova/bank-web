@@ -23,18 +23,7 @@
             vertical-align: middle;
         }
         
-        .line {
-            background: linear-gradient(113deg, #03318f 0%, #2572da 65%);
-            height: 150px;
-            color: white;
-            margin-top: 120px;   
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 30px;
-            font-style:bold;
-            
-        }
+        
        
         iframe {
             width: 1120px;
@@ -47,8 +36,19 @@
             text-align: center;
             
         }
+
+   
+       
+
     </style>
 
+    <script>
+        function navigateTo(url) {
+        window.location.href = url;
+    }
+
+    </script>
+    
 </head>
 <body>
     <header>
@@ -56,13 +56,23 @@
         <img src="img\logo2.png" height="60px">
         </div>
         Сибсоцбанк 
+
+        <div class="menu">
+            <div class="menu-item" onclick="navigateTo('company.html')">О нас</div>
+            <div class="menu-item" onclick="navigateTo('calculator.html')">Калькулятор </div>
+            <div class="menu-item" onclick="navigateTo('news.html')">Новости</div>
+            <div class="menu-item" onclick="navigateTo('contacts.html')">Контакты</div>
+            <div class="menu-item" onclick="navigateTo('video.html')">Видео</div>
+        </div>
+
+
     </header>
 
 <main>
 
     <div class="line">
-       Видео
-
+       ВИДЕО
+       
     </div>
 
     <div> 
@@ -75,7 +85,7 @@
 </main>
 
 <footer>
-   
+    1992–2024 «СибСоцБанк» ООО
 </footer>
 </body>
 </html>

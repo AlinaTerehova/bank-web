@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Калькулятор</title>
+    <title>Калькулятор валют</title>
     <link rel="stylesheet" href="main.css">
     <link rel="shortcut icon" href="C:\Users\админ\Desktop\нгту\WEB\bank-web\img\favicon.ico" type="image/x-icon">
     <link rel="'icon" href="C:\Users\админ\Desktop\нгту\WEB\bank-web\img\favicon-16x16.png">
@@ -12,35 +12,24 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&display=swap" rel="stylesheet">
 
-    
+
     <style>
         header {
             display: flex;
             align-items: center;
         }
 
-        .imgHead {
-            vertical-align: middle;
-        }
-        
-        h1 {
-            background: linear-gradient(113deg, #03318f 0%, #2572da 65%);
-            height: 150px;
-            color: white;
-            margin-top: 120px;   
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 30px;
-        }
+       
+
 
         h2 {
             padding-top: 1px;
         }
 
-        div {
-            margin: 10px;
-        }
+        footer {
+            margin-top: 60px;
+            
+        }        
 
         .container {
             width: 60%;
@@ -51,18 +40,19 @@
             background-color: #e8f2ff;
             margin: auto;
             box-shadow: 0 0 8px rgba(64, 104, 117, 0.5);
+            margin-top: 20px;
         }
 
         #currentRate
         {
             margin: 20px;
         }
-        
+
         #result {
             margin: 20px;
         }
 
-        
+
 
     </style>
 
@@ -124,9 +114,14 @@
                 });
             });
         });
-            
+
+        function navigateTo(url) {
+            window.location.href = url;
+        }
+
+
         </script>
-   
+
 
 </head>
 <body>
@@ -135,16 +130,28 @@
         <img src="img\logo2.png" height="60px">
         </div>
         Сибсоцбанк 
+
+        <div class="menu">
+            <div class="menu-item" onclick="navigateTo('company.html')">О нас</div>
+            <div class="menu-item" onclick="navigateTo('calculator.html')">Калькулятор </div>
+            <div class="menu-item" onclick="navigateTo('news.html')">Новости</div>
+            <div class="menu-item" onclick="navigateTo('contacts.html')">Контакты</div>
+            <div class="menu-item" onclick="navigateTo('video.html')">Видео</div>
+        </div>
+
     </header>
+<main>
+    
+    <div class="line">
+        КАЛЬКУЛЯТОР ВАЛЮТ
+    </div>
 
-    <h1>КАЛЬКУЛЯТОР ВАЛЮТ</h1>
 
-   
     <div class="container">
 
         <h2>Курс норвежской кроны сегодня:</h2>
         <div id="currentRate"></div>
-        
+
         <div>Подсчет валют:</div>
             <label>From:</label>
             <select id="from">
@@ -160,14 +167,14 @@
             <input type="text" id="amount" />
             <button type="button" id="convert">Конвертировать</button>
             <div id="result"></div>
-    
+
     </div>
-   
+
 
     </main>
 
     <footer>
-   
+        1992–2024 «СибСоцБанк» ООО
     </footer>
 </body>
 </html>
