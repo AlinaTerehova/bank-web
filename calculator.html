@@ -5,13 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Калькулятор валют</title>
     <link rel="stylesheet" href="main.css">
-    <link rel="shortcut icon" href="C:\Users\админ\Desktop\нгту\WEB\bank-web\img\favicon.ico" type="image/x-icon">
-    <link rel="'icon" href="C:\Users\админ\Desktop\нгту\WEB\bank-web\img\favicon-16x16.png">
-    <link rel="'icon" href="C:\Users\админ\Desktop\нгту\WEB\bank-web\img\favicon-32x32.png">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="'icon" href="img/favicon-16x16.png">
+    <link rel="'icon" href="img/favicon-32x32.png">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&display=swap" rel="stylesheet">
-
 
     <style>
         header {
@@ -19,17 +18,9 @@
             align-items: center;
         }
 
-       
-
-
         h2 {
             padding-top: 1px;
-        }
-
-        footer {
-            margin-top: 60px;
-            
-        }        
+        }   
 
         .container {
             width: 60%;
@@ -41,17 +32,13 @@
             margin: auto;
             box-shadow: 0 0 8px rgba(64, 104, 117, 0.5);
             margin-top: 20px;
+            margin-bottom: 300px;
         }
 
-        #currentRate
-        {
+        #currentRate, #result, .text{
             margin: 20px;
         }
-
-        #result {
-            margin: 20px;
-        }
-
+ 
 
 
     </style>
@@ -86,6 +73,13 @@
                 let fromCurrency = from.value;
                 let toCurrency = to.value;
                 let amt = amount.value;
+
+                if (!amt || isNaN(amt)) {
+                    result.innerHTML = "Пожалуйста, введите число";
+                    return; // Exit the function early
+                }
+
+
                 let url = `https://www.cbr-xml-daily.ru/daily_json.js`;
 
                 if (fromCurrency !== toCurrency) {
@@ -114,7 +108,7 @@
                 });
             });
         });
-
+        
         function navigateTo(url) {
             window.location.href = url;
         }
@@ -140,35 +134,35 @@
         </div>
 
     </header>
-<main>
-    
-    <div class="line">
-        КАЛЬКУЛЯТОР ВАЛЮТ
-    </div>
+    <main>
+        
+        <div class="line">
+            КАЛЬКУЛЯТОР ВАЛЮТ
+        </div>
 
 
-    <div class="container">
+        <div class="container">
 
-        <h2>Курс норвежской кроны сегодня:</h2>
-        <div id="currentRate"></div>
+            <h2>Курс норвежской кроны сегодня:</h2>
+            <div id="currentRate"></div>
 
-        <div>Подсчет валют:</div>
-            <label>From:</label>
-            <select id="from">
-                <option value="RUB">RUB</option>
-                <option value="NOK">NOK</option>
-            </select>
-            <label>To:</label>
-            <select id="to">
-                <option value="RUB">RUB</option>
-                <option value="NOK">NOK</option>
-            </select>
-            <label>Сумма:</label>
-            <input type="text" id="amount" />
-            <button type="button" id="convert">Конвертировать</button>
-            <div id="result"></div>
+            <div class="text">Подсчет валют:</div>
+                <label>From:</label>
+                <select id="from">
+                    <option value="RUB">RUB</option>
+                    <option value="NOK">NOK</option>
+                </select>
+                <label>To:</label>
+                <select id="to">
+                    <option value="RUB">RUB</option>
+                    <option value="NOK">NOK</option>
+                </select>
+                <label>Сумма:</label>
+                <input type="text" id="amount" />
+                <button type="button" id="convert">Конвертировать</button>
+                <div id="result"></div>
 
-    </div>
+        </div>
 
 
     </main>

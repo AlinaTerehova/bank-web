@@ -6,7 +6,6 @@ body {
     color:rgb(61, 60, 60);
     line-height: 1.5;
     text-align:  justify;
-    
 }
 
 footer {
@@ -24,7 +23,6 @@ footer {
     right: 0;    
     position: relative;
     border-top: 1px solid rgba(170, 166, 166, 0.5);
-
 }
     
 
@@ -41,18 +39,19 @@ header {
     padding-top: 10px;
     height: 100px;
     border-bottom: 1px solid rgba(170, 166, 166, 0.5);
-    color:rgb(32, 75, 246)
+    color:rgb(32, 75, 246);
+   
 }
 
 main {
-    margin-top: 100px;
+    margin-top: 100px;    
 }
 
 .menu {
-    display: flex;
-    display: flex; /* Располагаем содержимое блока по горизонтали */
+
+    display: flex; 
     align-items: center; /* Выравниваем содержимое по вертикали */
-    justify-content: center; 
+    justify-content: flex-end; 
     margin-left: 50px ;
 }
 
@@ -62,13 +61,12 @@ main {
     height: 60px;
     margin: 10px;
     border-radius: 40px;
-    display: flex; /* Располагаем содержимое блока по горизонтали */
-    align-items: center; /* Выравниваем содержимое по вертикали */
+    display: flex; 
+    align-items: center; 
     justify-content: center; 
     box-shadow: 0 0 8px rgba(120, 151, 161, 0.5);
     background-color: rgba(234, 249, 254, 0.5);
     cursor: pointer;
-    
 }
 
 
@@ -82,8 +80,6 @@ main {
     align-items: center;
     font-size: 30px;
     font-style:bold;
-    
-    
 }
 
 .imgHead {
@@ -92,7 +88,7 @@ main {
 }
 
 .menu-item:hover {
-    background-color: rgba(162, 169, 254, 0.739); /* Цвет подсветки при наведении */
+    background-color: rgba(162, 169, 254, 0.739); 
     box-shadow: 0 0 11px rgba(10, 52, 238, 0.5);
     color: white;
 }
